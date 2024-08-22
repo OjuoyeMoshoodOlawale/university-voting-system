@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.bg-gold-500 {
+    background-color: #D4AF37; /* Luxury gold color */
+}
+
+.bg-gold-600 {
+    background-color: #C9A05A; /* Slightly darker gold for hover effect */
+}

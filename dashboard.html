@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - University Voting System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+        body {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-custom-green {
+            background-color: #80c487; /* Green */
+        }
+
+        .bg-custom-green-dark {
+            background-color: #6cbf5d; /* Darker green for hover effect */
+        }
+
+        .bg-custom-orange {
+            background-color: #E3856B; /* Orange */
+        }
+
+        .bg-custom-orange-dark {
+            background-color: #d67c57; /* Darker orange for hover effect */
+        }
+
+        .bg-custom-light-pink {
+            background-color: #EDCBD2; /* Light pink */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <nav class="bg-white w-64 h-screen p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-6">Admin Dashboard</h2>
+            <ul>
+                <li><a href="#applicants" class="block py-2 px-4 mb-2 rounded-lg hover:bg-custom-light-pink">Manage Applicants</a></li>
+                <li><a href="#awards" class="block py-2 px-4 mb-2 rounded-lg hover:bg-custom-light-pink">Manage Awards</a></li>
+                <li><a href="#voting" class="block py-2 px-4 mb-2 rounded-lg hover:bg-custom-light-pink">Voting Setup</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <!-- Manage Applicants -->
+            <section id="applicants" class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Manage Applicants</h2>
+                <button class="bg-custom-green text-white px-6 py-3 rounded-lg shadow-lg hover:bg-custom-green-dark mb-4">Add New Applicant</button>
+                <table class="w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4 border-b">ID</th>
+                            <th class="py-3 px-4 border-b">Name</th>
+                            <th class="py-3 px-4 border-b">Award</th>
+                            <th class="py-3 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example row -->
+                        <tr>
+                            <td class="py-3 px-4 border-b">1</td>
+                            <td class="py-3 px-4 border-b">John Doe</td>
+                            <td class="py-3 px-4 border-b">Best Innovator</td>
+                            <td class="py-3 px-4 border-b">
+                                <button class="bg-custom-green text-white px-3 py-1 rounded-lg shadow-lg hover:bg-custom-green-dark">Edit</button>
+                                <button class="bg-custom-orange text-white px-3 py-1 rounded-lg shadow-lg hover:bg-custom-orange-dark ml-2">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Manage Awards -->
+            <section id="awards" class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Manage Awards</h2>
+                <button class="bg-custom-green text-white px-6 py-3 rounded-lg shadow-lg hover:bg-custom-green-dark mb-4">Add New Award</button>
+                <table class="w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4 border-b">ID</th>
+                            <th class="py-3 px-4 border-b">Award Name</th>
+                            <th class="py-3 px-4 border-b">Description</th>
+                            <th class="py-3 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example row -->
+                        <tr>
+                            <td class="py-3 px-4 border-b">1</td>
+                            <td class="py-3 px-4 border-b">Best Innovator</td>
+                            <td class="py-3 px-4 border-b">Award for the most innovative student.</td>
+                            <td class="py-3 px-4 border-b">
+                                <button class="bg-custom-green text-white px-3 py-1 rounded-lg shadow-lg hover:bg-custom-green-dark">Edit</button>
+                                <button class="bg-custom-orange text-white px-3 py-1 rounded-lg shadow-lg hover:bg-custom-orange-dark ml-2">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Voting Setup -->
+            <section id="voting">
+                <h2 class="text-3xl font-bold mb-6">Voting Setup</h2>
+                <button class="bg-custom-green text-white px-6 py-3 rounded-lg shadow-lg hover:bg-custom-green-dark mb-4">Setup Voting</button>
+                <table class="w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4 border-b">Contestant</th>
+                            <th class="py-3 px-4 border-b">Award</th>
+                            <th class="py-3 px-4 border-b">Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example row -->
+                        <tr>
+                            <td class="py-3 px-4 border-b">John Doe</td>
+                            <td class="py-3 px-4 border-b">Best Innovator</td>
+                            <td class="py-3 px-4 border-b">120</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
